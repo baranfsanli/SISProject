@@ -15,9 +15,9 @@ public class BaseClass {
 	public static WebDriver driver;
 	
 	
-	public static void setUp() {
+	public static void setUp() throws InterruptedException{
 		
-		ConfigsReader.readProperties(sis.utils.Constants.CONFIGURATION_FILEPATH);
+		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
 		
 		String browser = ConfigsReader.getProperty("browser");
 		
@@ -28,11 +28,12 @@ public class BaseClass {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-			
+			break;
 			
 		case "firefox":
 			WebDriverManager.chromedriver().setup();
 			driver = new FirefoxDriver();	
+			break;
 			
 		default:
 			break;
