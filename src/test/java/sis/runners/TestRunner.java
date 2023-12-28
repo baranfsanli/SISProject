@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 		
 		dryRun = false,
 		
-		tags = "@loginpage",
+		tags = "@emptycredentials",
 		monochrome = true,
 		plugin = {
 				"pretty",
