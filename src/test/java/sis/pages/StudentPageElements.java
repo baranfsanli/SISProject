@@ -71,7 +71,28 @@ public class StudentPageElements extends CommonMethods{
 	@FindBy (id="imgPassword")
 	public WebElement passwordArrow;
 	
+	@FindBy (id="studentStatus_list")
+	public WebElement studentStatusList;
 	
+	
+	@FindBy (id="students_students")
+	public WebElement studentsDD;
+	
+	
+	@FindBy (id="bStatusChange")
+	public WebElement enrollButton;
+	
+	
+	@FindBy (id="enrollGradeSection_list")
+	public WebElement gradeSelectionDDEnrollPopUp;
+	
+	
+	@FindBy (id="bEnroll")
+	public WebElement enrollPopUpButton;
+	
+	
+	@FindBy (id="lStatus")
+	public WebElement statusCheckEnrolled;
 	
 	public StudentPageElements() {
 		

@@ -12,9 +12,9 @@ import io.cucumber.junit.CucumberOptions;
 		features ="src/test/resources/features/",
 		glue ="sis.steps",
 		
-		dryRun = false,
+		dryRun = true,
 		
-		tags = "@addNewStudent",
+		tags = "@enrollStudent",
 		monochrome = true,
 		plugin = {
 				"pretty",
