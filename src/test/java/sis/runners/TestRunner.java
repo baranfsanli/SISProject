@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 		
 		dryRun = false,
 		
-		tags = "@dataTable",
+		tags = "@addNewStudent",
 		monochrome = true,
 		plugin = {
 				"pretty",
