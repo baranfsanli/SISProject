@@ -12,6 +12,8 @@ import sis.utils.CommonMethods;
 import sis.utils.ConfigsReader;
 
 public class AddNewStudent extends CommonMethods{
+	
+	
 	@When("I login with valid credentials and navigate to SIS homepage")
 	public void i_login_with_valid_credentials_and_navigate_to_sis_homepage() {
 		sendText(login.username, ConfigsReader.getProperty("username"));
@@ -24,8 +26,14 @@ public class AddNewStudent extends CommonMethods{
 	
 	@When("I click student tab and click on add new button")
 	public void i_click_student_tab_and_click_on_add_new_button() {
+		
 		click(homepage.studentTab);
-		click(studentpage.addNewStudentButton);
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(studentpage.addNewStudentButton));
+		
+	
+		jsClick(studentpage.addNewStudentButton);
 	
 	}
 	
@@ -60,7 +68,7 @@ public class AddNewStudent extends CommonMethods{
 	String expected = "Successfully Added";
 	
 	String actual = getAlertText().trim();
-	
+	System.out.println(expected.equals(actual));
 	Assert.assertEquals(expected, actual);
 	
 	Thread.sleep(4);
