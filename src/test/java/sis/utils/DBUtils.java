@@ -20,17 +20,19 @@ public class DBUtils {
 	
 	public static void getConnection() {
 		
-		try {
 		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
 		
-		String dbUrl= ConfigsReader.getProperty("dbUrl");
+		
+		try {
+			
+			String dbUrl= ConfigsReader.getProperty("dbUrl");
 		
 		
-			Connection conn = DriverManager.getConnection(dbUrl);
+			conn = DriverManager.getConnection(dbUrl);
 			
 		} catch (SQLException e) {
 			
-			System.out.println("Can not connect to the DB"+e);
+			System.out.println("Can not connect to the DB");
 		}
 	}
 	
