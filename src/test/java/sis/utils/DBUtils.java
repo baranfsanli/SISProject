@@ -27,11 +27,11 @@ public class DBUtils {
 			
 			String dbUrl= ConfigsReader.getProperty("dbUrl");
 		
-		
+			System.out.println(dbUrl);
 			conn = DriverManager.getConnection(dbUrl);
 			
 		} catch (SQLException e) {
-			
+			e.printStackTrace();
 			System.out.println("Can not connect to the DB");
 		}
 	}
