@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 		
 		dryRun = false,
 		
-		tags = "@studentTableDB",
+		tags = "@addParentDetails",
 		monochrome = true,
 		plugin = {
 				"pretty",

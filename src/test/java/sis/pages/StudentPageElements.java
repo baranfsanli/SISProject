@@ -11,7 +11,7 @@ import sis.utils.CommonMethods;
 public class StudentPageElements extends CommonMethods{
 	
 
-	@FindBy (xpath ="//*[@id=\"form1\"]/table[3]/tbody/tr/td[3]/table[1]//table//td")
+	@FindBy (xpath ="//*[@id='form1']/table[3]/tbody/tr/td[3]/table[1]//table//td")
 	public List<WebElement> listofStudentTabItems;
 	
 	@FindBy (id ="bAdd")
@@ -93,6 +93,10 @@ public class StudentPageElements extends CommonMethods{
 	
 	@FindBy (id="lStatus")
 	public WebElement statusCheckEnrolled;
+	
+	
+	@FindBy (xpath ="//a[text()='Parental']")
+	public WebElement parentalTabButton;
 	
 	public StudentPageElements() {
 		
